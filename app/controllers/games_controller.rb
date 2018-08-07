@@ -49,33 +49,4 @@ class GamesController < ApplicationController
       [0, "Sorry but #{word.upcase} does not seem to be a valid English word"]
     end
   end
-
-  # def play_games(word, letters)
-  #   result = JSON.parse(open("https://wagon-dictionary.herokuapp.com/#{word}").read)
-  #   if result[:found.to_s] == true
-  #     final_response = result(word, letters)[:response]
-  #     final_score = result(word, letters)[:score]
-  #   else
-  #     final_response = "Sorry but #{word.upcase} does not seem to be a valid English word"
-  #     final_score = 0
-  #   end
-  #   { score: final_score, message: final_response }
-  # end
-  #
-  # def count(word, letters)
-  #   word.chars.all? do |character|
-  #     (letters.include? character.upcase) && (word.length <= letters.count(character.upcase))
-  #   end
-  # end
-  #
-  # def result(word, letters)
-  #   if count(word, letters) == true
-  #     response = "Congratulations! #{word.upcase} is a valid English word"
-  #     score = word.length
-  #   else
-  #     response = "Sorry but #{word.upcase} can't be built out of the original grid"
-  #     score = 0
-  #   end
-  #   { score: score, response: response }
-  # end
 end
